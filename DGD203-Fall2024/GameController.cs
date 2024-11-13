@@ -1,3 +1,5 @@
+using FirstGame.Engines;
+
 namespace FirstGame;
 
 public class GameController
@@ -13,25 +15,16 @@ public class GameController
 
     public void StartGame()
     {
-        /*
+        
         #region VEHICLE EXPLANATION
         
-        Vehicle myVehicle = new Vehicle(100f);
-        Console.WriteLine($"myVehicle has {myVehicle.Fuel} percent fuel left");
-
-        Vehicle theVehicle = myVehicle;
-        Console.WriteLine($"theVehicle has {theVehicle.Fuel} percent fuel left");
-        
-        myVehicle.UseFuel(30f);
-        Console.ReadLine();
-        Console.WriteLine("-------");
-        Console.WriteLine("fuel used");
-        Console.WriteLine($"myVehicle has {myVehicle.Fuel} percent fuel left");
-        Console.WriteLine($"theVehicle has {theVehicle.Fuel} percent fuel left");
+        Car myCar = new Car(100f, new AlienBattery());
+        myCar.StartCar();
         
         #endregion
-        */
         
+        
+        /*
         #region GAME START
         
         Console.WriteLine("The game started. Please give me your name:");
@@ -64,22 +57,12 @@ public class GameController
             Console.WriteLine("You did not enter a valid age. I am using the default age");
         }
         
-        /*
-        Console.WriteLine("Give me a float");
-        float randomFloat = 0f;
-        if (float.TryParse(Console.ReadLine(), out float thisFloat))
-        {
-            randomFloat = thisFloat;
-            Console.WriteLine($"The float is {randomFloat}");
-        }
-        */
-        
         _player.Initialize(playerName, playerAge);
         
         Console.WriteLine($"Welcome {_player.Name} of {_player.Age} years of age, to this game");
         
         #endregion
-        
+        */
         
     }
 }

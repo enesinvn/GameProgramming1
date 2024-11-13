@@ -1,16 +1,12 @@
 namespace FirstGame;
 
-public class Vehicle
+public abstract class Vehicle
 {
-    public float Fuel { get; private set; }  // percentage of fuel
-
-    public Vehicle(float fuel)
-    {
-        Fuel = Math.Clamp(fuel, 0f, 100f);
-    }
+    public float Fuel { get; protected set; }  // percentage of fuel
 
     public void UseFuel(float fuel)
     {
         Fuel = Fuel - fuel < 0f ? 0f : Fuel - fuel;
     }
+    
 }
