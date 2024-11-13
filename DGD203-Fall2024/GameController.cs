@@ -4,12 +4,10 @@ namespace FirstGame;
 
 public class GameController
 {
-    private PhysicsCalculator _calc;
     private Player _player;
     
     public GameController()
     {
-        _calc = new PhysicsCalculator();
         _player = new Player();
     }
 
@@ -22,11 +20,12 @@ public class GameController
         myCar.StartCar();
         
         #endregion
-        
-        
+
+        float force = PhysicsCalculator.Force(5, 6);
+
         /*
         #region GAME START
-        
+
         Console.WriteLine("The game started. Please give me your name:");
         string playerName = Console.ReadLine();
         if (playerName == "" || playerName == null)
@@ -34,7 +33,7 @@ public class GameController
             Console.WriteLine("There is no name here! You are dead to me");
             playerName = "Dead2Me";
         }
-        
+
         Console.WriteLine("Splendid. Now tell me your age");
         int playerAge = _player.Age;
         if (int.TryParse(Console.ReadLine(), out int age))
@@ -47,7 +46,7 @@ public class GameController
             } else if (age < 65)
             {
                 Console.WriteLine("Okay, you are in our target audience. You may play");
-            } else 
+            } else
             {
                 Console.WriteLine("Are you sure you can handle the excitement this game will dish out?");
             }
@@ -56,13 +55,13 @@ public class GameController
         {
             Console.WriteLine("You did not enter a valid age. I am using the default age");
         }
-        
+
         _player.Initialize(playerName, playerAge);
-        
+
         Console.WriteLine($"Welcome {_player.Name} of {_player.Age} years of age, to this game");
-        
+
         #endregion
         */
-        
+
     }
 }

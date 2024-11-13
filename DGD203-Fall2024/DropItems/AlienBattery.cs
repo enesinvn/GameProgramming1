@@ -11,10 +11,10 @@ public class AlienBattery : DropItem, IEngine, IWeapon
     {
         
     }
-
-    public void Check()
+    
+    public bool IsRunning()
     {
-        
+        return true;
     }
 
     public void Shoot()

@@ -6,5 +6,5 @@ public interface IEngine
 
     public void Stop();
 
-    public void Check();
+    public bool IsRunning();
 }

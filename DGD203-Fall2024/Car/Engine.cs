@@ -18,8 +18,8 @@ public abstract class Engine : IEngine
         Running = false;
     }
 
-    public void Check()
+    public bool IsRunning()
     {
-        
+        return Running;
     }
 }
